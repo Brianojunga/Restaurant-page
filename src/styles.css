@@ -19,10 +19,11 @@ body{
     background-size : cover;
     background-repeat : no-repeat;
     min-height : 100vh;
-    width : 100vw;
+    width : 100%;
     position : relative;
     isolation : isolate;
     font-family : Roboto, Arial;
+    color :rgb(211, 207, 207);
 }
 body::after{
     content : '';
@@ -30,7 +31,7 @@ body::after{
     inset : 0;
     z-index : -1;
     background: rgb(0, 0, 0);
-    opacity : 0.9;
+    opacity : 0.85;
 }
 
 nav{
@@ -95,15 +96,19 @@ svg{
     align-self: center;
     cursor : pointer;
 }
-#content, .img-div{
+ .img-div{
     display : flex;
     align-items : center;
     justify-content: center;
     margin : 0 auto;
 }
 #content{
-    height : 80vh;
     width : 90%;
+    min-height : 90vh;
+    margin : 0 auto;
+    display : flex;
+    justify-content: center;
+
 }
 
 
@@ -111,6 +116,7 @@ svg{
     color : var(--font-color);
     letter-spacing: 1px;
     margin : 0 auto;
+    margin-top : 7rem;
     gap : 5rem;
     display: grid;
     grid-template-columns : repeat(auto-fit, minmax(min(50%, 50ch), 1fr));
@@ -127,7 +133,6 @@ h1{
 }
 p{
     font-family : Roboto, Arial;
-    font-size: 1.2rem;
 }
 .chicken-img{
     width : min(50%, 300px);
@@ -138,6 +143,40 @@ p{
     padding : 1rem;
 }
 
+.aboutmenu{
+    margin : 0 2rem;
+    width : 60%;
+    margin-bottom : 2rem;
+    padding-bottom  : 2rem;
+}
+
+.aboutmenu > h1{
+    text-align: center;
+    color : var(--line-color)
+}
+
+.photo > img{
+    width : 100%;
+    object-fit: cover;
+    height : auto;
+    object-fit : cover;
+    display : block;
+
+}
+
+.aboutmenu p{
+    margin : 1rem auto;
+}
+
+hr {
+    margin :1rem 0 2rem;
+    background-color : #b87d4c66;
+    border : none;
+    height : 3px 
+}
+.hr2{
+    margin-top: 2rem;
+}
 
 
 
@@ -147,25 +186,39 @@ p{
 
 
 
-
-
-
-
-
-
-@media(max-width : 800px){
+@media(max-width : 960px){
     .big-screen-navbar-btn{
         display : none;
     }
     .svgbtnopen{
         display : block;
     }
-    p{
-        font-size : 0.85rem;
+    .content{
+        margin-top: 0;
+        letter-spacing: 0;
+    }
+
+    .aboutmenu{
+        width : 100%;
+        margin : 0 auto;
+        margin-bottom : 2rem;
+    }
+    .img-div {
+        padding-bottom: 1rem;
     }
 }
 
-@media(min-width : 800px){
+
+
+
+
+
+
+
+
+
+
+@media(min-width : 960px){
     .svgbtnopen, .svgbtnclose{
         display : none;
     }

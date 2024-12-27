@@ -1,11 +1,13 @@
 import "./styles.css";
-import chickenimg from "./photos/chicken.jpeg"
+import chickenimg from "./photos/chicken.jpeg";
+import { aboutMenu } from "./about.mjs";
 
 const smallNavBar =  document.querySelector(".small-screen-navbar")
 const menuBar = document.querySelector(".svgbtnopen");
 const mainDiv = document.querySelector("#content");
 const home = document.querySelectorAll(".home");
 const menu = document.querySelectorAll(".menu");
+const about = document.querySelectorAll(".about");
 
 menuBar.addEventListener("click", () =>{
     if(menuBar.className === "svgbtnopen"){
@@ -19,7 +21,7 @@ menuBar.addEventListener("click", () =>{
 })
 
 
-function createElements(element, clsname, text=""){
+export function createElements(element, clsname, text=""){
     const el = document.createElement(element);
     el.classList.add(clsname);
     el.textContent = text
@@ -27,8 +29,15 @@ function createElements(element, clsname, text=""){
 }
 
 function homeMenu(){
+
+    const mainContent = document.createElement("div");
+    mainContent.classList.add("main-content");
+
+
     const div = document.createElement("div");
     div.classList.add("content");
+
+   mainContent.appendChild(div)
 
 
     let paragraphsDiv, imgDiv
@@ -36,7 +45,7 @@ function homeMenu(){
     for(let i = 0; i < 2; i++){
         let newDiv = document.createElement("div");
         if (i === 0){
-            newDiv.classList.add("paragraphs");
+            newDiv.classList.add("photo");
             paragraphsDiv = newDiv
         }else{
             newDiv.classList.add("img-div")
@@ -56,8 +65,7 @@ function homeMenu(){
        imgEl 
     )
 
-    return div
-   
+    return mainContent
 }
 mainDiv.appendChild(homeMenu())
 
@@ -71,6 +79,13 @@ home.forEach((button) =>{button.addEventListener("click", () =>{
 
 menu.forEach((button) =>{button.addEventListener("click", () =>{
     mainDiv.replaceChildren()
+    smallNavBar.style.display = "none"; 
+    menuBar.className = "svgbtnopen";
+})})
+
+about.forEach((button) =>{button.addEventListener("click", () =>{
+    mainDiv.replaceChildren()
+    mainDiv.appendChild(aboutMenu())
     smallNavBar.style.display = "none"; 
     menuBar.className = "svgbtnopen";
 })})
