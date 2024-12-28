@@ -1,6 +1,7 @@
 import "./styles.css";
 import chickenimg from "./photos/chicken.jpeg";
 import { aboutMenu } from "./about.mjs";
+import { contactMenu } from "./contact.mjs";
 
 const smallNavBar =  document.querySelector(".small-screen-navbar")
 const menuBar = document.querySelector(".svgbtnopen");
@@ -8,6 +9,7 @@ const mainDiv = document.querySelector("#content");
 const home = document.querySelectorAll(".home");
 const menu = document.querySelectorAll(".menu");
 const about = document.querySelectorAll(".about");
+const contact = document.querySelectorAll(".contact");
 
 menuBar.addEventListener("click", () =>{
     if(menuBar.className === "svgbtnopen"){
@@ -67,6 +69,7 @@ function homeMenu(){
 
     return mainContent
 }
+
 mainDiv.appendChild(homeMenu())
 
 
@@ -86,6 +89,13 @@ menu.forEach((button) =>{button.addEventListener("click", () =>{
 about.forEach((button) =>{button.addEventListener("click", () =>{
     mainDiv.replaceChildren()
     mainDiv.appendChild(aboutMenu())
+    smallNavBar.style.display = "none"; 
+    menuBar.className = "svgbtnopen";
+})})
+
+contact.forEach((button) =>{button.addEventListener("click", () =>{
+    mainDiv.replaceChildren()
+    mainDiv.appendChild(contactMenu())
     smallNavBar.style.display = "none"; 
     menuBar.className = "svgbtnopen";
 })})

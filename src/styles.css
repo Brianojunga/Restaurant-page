@@ -126,10 +126,16 @@ svg{
 
 
 
-h1{
-    font-size : 2.5rem;
+h1, h2{
     font-family: Agbalumo, serif;
     margin : 0.5rem 0;
+}
+
+h1{
+    font-size : 2.5rem;
+}
+h2{
+    color : var(--line-color)
 }
 p{
     font-family : Roboto, Arial;
@@ -144,9 +150,9 @@ p{
 }
 
 .aboutmenu{
-    margin : 0 2rem;
+    margin : 0 2rem 2rem;
     width : 60%;
-    margin-bottom : 2rem;
+    /* margin-bottom : 2rem; */
     padding-bottom  : 2rem;
 }
 
@@ -177,7 +183,14 @@ hr {
 .hr2{
     margin-top: 2rem;
 }
+.hr3{
+    margin : 0.5rem 0;
+    background-color : #b87d4c3d
+}
 
+.aboutmenu h2{
+    margin-top : 1rem;
+}
 
 
 
