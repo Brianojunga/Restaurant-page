@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Autour+One&family=Creepster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Autour+One&family=Creepster&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
     margin : 0;
@@ -33,7 +34,12 @@ body::after{
     background: rgb(0, 0, 0);
     opacity : 0.85;
 }
-
+nav > h1{
+    margin-right : auto;
+    color : var(--line-color);
+    font-family: Dancing Script
+    ;
+}
 nav{
     display : flex;
     justify-content: flex-end;
@@ -61,7 +67,7 @@ nav > button::after {
     width: 0;                     
     height: 2px;                  
     background-color: var(--line-color); 
-    transition: width 250ms ease-in;     
+    transition: width 400ms ease-in;     
 }
 .book-table{
     border : 2px solid;
@@ -152,7 +158,6 @@ p{
 .aboutmenu{
     margin : 0 2rem 2rem;
     width : 60%;
-    /* margin-bottom : 2rem; */
     padding-bottom  : 2rem;
 }
 
