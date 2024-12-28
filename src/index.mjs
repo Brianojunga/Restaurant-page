@@ -2,6 +2,12 @@ import "./styles.css";
 import chickenimg from "./photos/chicken.jpeg";
 import { aboutMenu } from "./about.mjs";
 import { contactMenu } from "./contact.mjs";
+import { ourMenu } from "./menu.mjs";
+
+
+
+
+
 
 const smallNavBar =  document.querySelector(".small-screen-navbar")
 const menuBar = document.querySelector(".svgbtnopen");
@@ -82,6 +88,7 @@ home.forEach((button) =>{button.addEventListener("click", () =>{
 
 menu.forEach((button) =>{button.addEventListener("click", () =>{
     mainDiv.replaceChildren()
+    mainDiv.appendChild(ourMenu())
     smallNavBar.style.display = "none"; 
     menuBar.className = "svgbtnopen";
 })})

@@ -114,7 +114,6 @@ svg{
     margin : 0 auto;
     display : flex;
     justify-content: center;
-
 }
 
 
@@ -197,6 +196,13 @@ hr {
     margin-top : 1rem;
 }
 
+.aboutmenu .menuh2{
+    margin-top: 3rem;
+}
+ h3{
+    /* color : #f9f9717d; */
+    color : #eaa50f83;
+ }
 
 
 
